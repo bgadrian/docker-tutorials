@@ -2,6 +2,7 @@
 ## About
 
 This repository should be a self-sufficient tutorial for a back-end developer to get started with Docker.
+
 It was built as a companion code for the first part of my Pragmatic Docker intro series:
 https://coder.today/docker-01-first-steps-of-your-web-app-pragmatic-intro-series-ee281a3b440d
 

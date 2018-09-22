@@ -9,6 +9,8 @@ const handleRequest = function (request, response) {
   console.log("request received");
 
   cache
+    //note, this command will increase the value by 1, for ANY request
+    //if you access it from a browser it will make 2 requests: "/" and "favicon.ico"
     .increment("pageviews", 1, { initial: 0, expires: 0 })
     .then(() => {
       return cache.get("pageviews");
@@ -16,7 +18,7 @@ const handleRequest = function (request, response) {
     .then((val) => {
       //responding to the http request
       response.writeHead(200);
-      response.end("Hello from app.js! Page views: " + val.value + "\n");
+      response.end("Hello from app.js! Request count: " + val.value + "\n");
     })
     .catch(reason => {
       console.error(reason);

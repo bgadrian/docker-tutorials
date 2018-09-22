@@ -16,17 +16,17 @@ const handleRequest = function (request, response) {
     .then((val) => {
       //responding to the http request
       response.writeHead(200);
-      response.end("Hello from app.js! Page views: " + val.value);
+      response.end("Hello from app.js! Page views: " + val.value + "\n");
     })
     .catch(reason => {
       console.error(reason);
       response.writeHead(500);
       response.end("Error: " + reason);
     })
-
 }
 
 const www = http.createServer(handleRequest);
 //the same port must be in the Dockerfile
-// by default docker will not expose any port, for security reasons
+//by default docker will not expose any port, for security reasons
+console.log("I am listening on :8080");
 www.listen(8080);

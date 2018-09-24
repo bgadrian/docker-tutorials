@@ -14,9 +14,9 @@ docker run `#main command, run a container on my machine` \
     --detach `#detach the process from the current bash` \
     --network tut-network `#connect it to the private network we created, --link is deprecated` \
     --restart=on-failure:3 `#if the app.js crashes, docker will restart the container 3 times max` \
-    --publish 127.0.0.1:8080:8080 `#link EXPOSEd port from Docker file to your localhost` \
+    --publish 127.0.0.1:80:80 `#link EXPOSEd port from Docker file to your localhost` \
     tut-app-image:latest `#the name of the image:tag`
 
 #more options https://docs.docker.com/engine/reference/commandline/run/#description
-echo "You can visit http://localhost:8080/ or type 'curl localhost:8080'"
+echo "You can visit http://localhost/ or type 'curl localhost'"
 docker ps `#list all the running containers`

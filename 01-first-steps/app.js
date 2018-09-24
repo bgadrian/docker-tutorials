@@ -30,5 +30,5 @@ const handleRequest = function (request, response) {
 const www = http.createServer(handleRequest);
 //the same port must be in the Dockerfile
 //by default docker will not expose any port, for security reasons
-console.log("I am listening on :8080");
-www.listen(8080);
+console.log("I am listening on :80");
+www.listen(80);

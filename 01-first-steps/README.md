@@ -34,11 +34,11 @@ You will see the benefits of containers and images right away, with one command 
 
 3. You should have the app and memcache up and running
 ```bash
-$ curl localhost:8080
+$ curl localhost
 Hello from app.js! Page views: 0
-$ curl localhost:8080
+$ curl localhost
 Hello from app.js! Page views: 1
-$ curl localhost:8080
+$ curl localhost
 Hello from app.js! Page views: 2
 ```
 
